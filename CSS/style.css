@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: white;  
+}
+
+.MainContainer {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: black;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    gap: 20px;
+}
