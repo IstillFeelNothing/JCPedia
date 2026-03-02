@@ -1,20 +1,78 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/style.css">
-	<title>About page</title>
+    <title>About - JCPedia</title>
 </head>
 <body>
-<div class = "main-container">
+<div class="main-container">
 <header>
     <nav>
         <ul>
-            <li><a href="main.html">Головна</a></li>
+            <li><a href="main.html">Main</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown">
+                <button class="dropdown-toggle" type="button" aria-label="Car menu">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="./cars/toyota.html">Toyota</a></li>
+                    <li><a href="./cars/mitsubishi.html">Mitsubishi</a></li>
+                    <li><a href="./cars/honda.html">Honda</a></li>
+                    <li><a href="./cars/nissan.html">Nissan</a></li>
+                    <li><a href="./cars/mazda.html">Mazda</a></li>
+                    <li><a href="./cars/subaru.html">Subaru</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </header>
+
+<h1 class="page-title">About</h1>
+<h2 class="page-subtitle">Project Information</h2>
+
+<main class="car-page">
+    <section class="car-hero" aria-labelledby="about-heading">
+        <h3 id="about-heading">About JCPedia</h3>
+        <p>
+            Цей проект створений для демонстрації навичок у розробці веб-сайтів, зокрема в HTML та CSS. Він присвячений японським автомобілям і містить
+             інформацію про різні бренди та моделі. Мета проекту - навчитися створювати веб-сайти за допомогою HTML та CSS.
+        </p>
+    </section>
+
+    <section class="car-specs" aria-labelledby="mission-heading">
+        <h3 id="mission-heading">Mission</h3>
+        <ul>
+            <li>Використати як можна більше різних HTML та CSS елементів</li>
+            <li>Попрактикуватися в створенні адаптивних веб-сайтів</li>
+            <li>Попрактикуватися в створенні dropdown меню</li>
+            <li>зробити "нормальний" дизайн</li>
+        </ul>
+    </section>
+
+    <section class="car-notes" aria-labelledby="extra-heading">
+        <h3 id="extra-heading">More Info</h3>
+        <p>
+            Коли я почав вивчати веб-розробку, а це було в 7 классі школи, нам дали завдання створити веб сторінки на будь-яку тему, 
+            грубо кажучи як і це завдання. Тоді я обрав туж саму тему про японьські автомобілі, але моїх навичок не вистачало на те, 
+            щоб зробити щось більш-менш адекватне, тому вийшло не дуже. Тому цей проект я вважаю такою собі "реінкарнацією". Дизайн 
+            веб сторінок я взяв з сайту roadmap.sh
+
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>By Liedienov Mikhail</p>
+    <div class="footer-links">
+        <a href="https://github.com/IstillFeelNothing" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mikhail-liedienov-b96662301/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+</footer>
 </div>
 </body>
 </html>
