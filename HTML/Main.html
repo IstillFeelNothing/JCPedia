@@ -1,36 +1,51 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/style.css">
-	<title>Main page</title>
+    <title>Main page</title>
 </head>
 <body>
-<div class = "main-container">
+<div class="main-container">
 <header>
     <nav>
         <ul>
             <li><a href="main.html">Головна</a></li>
-            <li>
-                <select name="Car" id="Carlist">
-                    <option value="toyota">Toyota</option>
-                    <option value="mitsubishi">Mitsubishi</option>
-                    <option value="honda">Honda</option>
-                    <option value="nissan">Nissan</option>
-                    <option value="mazda">Mazda</option>
-                    <option value="subaru">Subaru</option>
-                    <option value="lexus">Lexus</option>
-                </select>
+            <li class="dropdown">
+                <button class="dropdown-toggle" type="button" aria-label="Car menu">
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                    <span class="menu-line"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="./cars/toyota.html">Toyota</a></li>
+                    <li><a href="./cars/mitsubishi.html">Mitsubishi</a></li>
+                    <li><a href="./cars/honda.html">Honda</a></li>
+                    <li><a href="./cars/nissan.html">Nissan</a></li>
+                    <li><a href="./cars/mazda.html">Mazda</a></li>
+                    <li><a href="./cars/subaru.html">Subaru</a></li>
+                </ul>
             </li>
             <li><a href="about.html">Про нас</a></li>
         </ul>
+    </nav>
 </header>
+<h1 class="page-title">JCPedia</h1>
 <main>
-    
+    <a class="car-selection-container" href="./cars/honda.html">Honda</a>
+    <a class="car-selection-container" href="./cars/mazda.html">Mazda</a>
+    <a class="car-selection-container" href="./cars/mitsubishi.html">Mitsubishi</a>
+    <a class="car-selection-container" href="./cars/nissan.html">Nissan</a>
+    <a class="car-selection-container" href="./cars/subaru.html">Subaru</a>
+    <a class="car-selection-container" href="./cars/toyota.html">Toyota</a>
 </main>
 <footer>
-
+    <p>By Liedienov Mikhail</p>
+    <div class="footer-links">
+        <a href="https://github.com/IstillFeelNothing" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mikhail-liedienov-b96662301/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
 </footer>
 </div>
 </body>
