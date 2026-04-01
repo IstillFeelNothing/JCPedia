@@ -1,4 +1,4 @@
-body {
+﻿body {
     margin: 0;
     padding: 0;
     font-family: "Poppins", "Segoe UI", sans-serif;
@@ -210,7 +210,6 @@ main {
 }
 
 .car-selection-container:hover,
-.car-selection-container:focus-within,
 .car-selection-container.is-favorite {
     border-color: rgba(255, 92, 122, 0.5);
     background: linear-gradient(180deg, rgba(11, 28, 60, 0.95), rgba(8, 21, 50, 0.95));
@@ -329,3 +328,4 @@ footer p {
         font-size: 20px;
     }
 }
+

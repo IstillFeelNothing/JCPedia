@@ -1,4 +1,4 @@
-(() => {
+﻿(() => {
     const FAVORITES_KEY = "jcpedia:favorites";
 
     function initDropdowns() {
@@ -112,6 +112,29 @@
                 if (card) {
                     card.classList.toggle("is-favorite", nowFavorite);
                 }
+
+                button.blur();
+            });
+        });
+    }
+
+    function initCardNavigation() {
+        const cards = document.querySelectorAll(".car-selection-container");
+        cards.forEach((card) => {
+            const link = card.querySelector(".car-link");
+            if (!link) {
+                return;
+            }
+
+            card.addEventListener("click", (event) => {
+                if (event.target.closest(".favorite-toggle")) {
+                    return;
+                }
+
+                const href = link.getAttribute("href");
+                if (href) {
+                    window.location.href = href;
+                }
             });
         });
     }
@@ -119,4 +142,5 @@
     initDropdowns();
     initSearch();
     initFavorites();
+    initCardNavigation();
 })();
