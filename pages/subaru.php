@@ -1,44 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../css/style.css">
-    <title>Subaru - JCPedia</title>
-</head>
-<body>
-<div class="main-container">
-<header>
-    <nav>
-        <ul>
-            <li><a href="../../index.html">Main</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li class="dropdown">
-                <button class="dropdown-toggle" type="button" aria-label="Car menu">
-                    <span class="menu-line"></span>
-                    <span class="menu-line"></span>
-                    <span class="menu-line"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="toyota.html">Toyota</a></li>
-                    <li><a href="mitsubishi.html">Mitsubishi</a></li>
-                    <li><a href="honda.html">Honda</a></li>
-                    <li><a href="nissan.html">Nissan</a></li>
-                    <li><a href="mazda.html">Mazda</a></li>
-                    <li><a href="subaru.html">Subaru</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</header>
-
-<h1 class="page-title">Subaru</h1>
+﻿<h1 class="page-title">Subaru</h1>
 <h2 class="page-subtitle">WRX STI and BRZ</h2>
 
 <main class="car-page">
     <section class="car-hero" aria-labelledby="wrx-heading">
         <h3 id="wrx-heading">Subaru WRX STI</h3>
-        <img src="../../assets/wrxsti.jpg" alt="Subaru WRX STI">
+        <img src="assets/wrxsti.jpg" alt="Subaru WRX STI">
     </section>
 
     <section class="car-specs" aria-labelledby="wrx-specs-heading">
@@ -62,7 +28,7 @@
 
     <section class="car-hero" aria-labelledby="brz-heading">
         <h3 id="brz-heading">Subaru BRZ</h3>
-        <img src="../../assets/brz.jpg" alt="Subaru BRZ">
+        <img src="assets/brz.jpg" alt="Subaru BRZ">
     </section>
 
     <section class="car-specs" aria-labelledby="brz-specs-heading">
@@ -84,16 +50,3 @@
         </p>
     </section>
 </main>
-
-<footer>
-    <p>By Liedienov Mikhail</p>
-    <div class="footer-links">
-        <a href="https://github.com/IstillFeelNothing" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/mikhail-liedienov-b96662301/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </div>
-</footer>
-</div>
-<script src="../../js/app.js"></script>
-</body>
-</html>
-

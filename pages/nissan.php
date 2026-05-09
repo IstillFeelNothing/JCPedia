@@ -1,44 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../css/style.css">
-    <title>Nissan - JCPedia</title>
-</head>
-<body>
-<div class="main-container">
-<header>
-    <nav>
-        <ul>
-            <li><a href="../../index.html">Main</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li class="dropdown">
-                <button class="dropdown-toggle" type="button" aria-label="Car menu">
-                    <span class="menu-line"></span>
-                    <span class="menu-line"></span>
-                    <span class="menu-line"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="toyota.html">Toyota</a></li>
-                    <li><a href="mitsubishi.html">Mitsubishi</a></li>
-                    <li><a href="honda.html">Honda</a></li>
-                    <li><a href="nissan.html">Nissan</a></li>
-                    <li><a href="mazda.html">Mazda</a></li>
-                    <li><a href="subaru.html">Subaru</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-</header>
-
-<h1 class="page-title">Nissan</h1>
+﻿<h1 class="page-title">Nissan</h1>
 <h2 class="page-subtitle">Skyline R34 and 350Z</h2>
 
 <main class="car-page">
     <section class="car-hero" aria-labelledby="r34-heading">
         <h3 id="r34-heading">Nissan Skyline R34</h3>
-        <img src="../../assets/r34.jpg" alt="Nissan Skyline R34">
+        <img src="assets/r34.jpg" alt="Nissan Skyline R34">
     </section>
 
     <section class="car-specs" aria-labelledby="r34-specs-heading">
@@ -62,7 +28,7 @@
 
     <section class="car-hero" aria-labelledby="z350-heading">
         <h3 id="z350-heading">Nissan 350Z</h3>
-        <img src="../../assets/z350.jpg" alt="Nissan 350Z">
+        <img src="assets/z350.jpg" alt="Nissan 350Z">
     </section>
 
     <section class="car-specs" aria-labelledby="z350-specs-heading">
@@ -84,16 +50,3 @@
         </p>
     </section>
 </main>
-
-<footer>
-    <p>By Liedienov Mikhail</p>
-    <div class="footer-links">
-        <a href="https://github.com/IstillFeelNothing" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/mikhail-liedienov-b96662301/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-    </div>
-</footer>
-</div>
-<script src="../../js/app.js"></script>
-</body>
-</html>
-
