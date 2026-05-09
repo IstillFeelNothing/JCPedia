@@ -15,6 +15,18 @@ $pages = [
 $currentPage = $_GET['page'] ?? 'main';
 $contentFile = $pages[$currentPage] ?? null;
 $is404 = $contentFile === null;
+
+if (isset($_GET['partial']) && $_GET['partial'] === '1') {
+    if ($is404) {
+        http_response_code(404);
+        echo '<h1 class="page-title">404</h1>';
+        echo '<h2 class="page-subtitle">Page not found</h2>';
+        echo '<main><p>Requested page does not exist.</p></main>';
+    } else {
+        require $contentFile;
+    }
+    exit;
+}
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +60,7 @@ $is404 = $contentFile === null;
         </ul>
     </nav>
 </header>
+<div id="content-zone">
 <?php
 if ($is404) {
     http_response_code(404);
@@ -58,6 +71,7 @@ if ($is404) {
     require $contentFile;
 }
 ?>
+</div>
 <footer>
     <p>By Liedienov Mikhail</p>
     <div class="footer-links">

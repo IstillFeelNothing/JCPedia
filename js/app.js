@@ -1,5 +1,6 @@
-﻿(() => {
+(() => {
     const FAVORITES_KEY = "jcpedia:favorites";
+    const CONTENT_ZONE_SELECTOR = "#content-zone";
 
     function initDropdowns() {
         const dropdowns = document.querySelectorAll(".dropdown");
@@ -133,14 +134,99 @@
 
                 const href = link.getAttribute("href");
                 if (href) {
+                    const page = parsePageFromHref(link.href);
+                    if (page) {
+                        loadPageContent(page);
+                        return;
+                    }
                     window.location.href = href;
                 }
             });
         });
     }
 
+    function initPageFeatures() {
+        initSearch();
+        initFavorites();
+        initCardNavigation();
+    }
+
+    function parsePageFromHref(href) {
+        const url = new URL(href, window.location.origin);
+        const page = url.searchParams.get("page");
+        return page ? page.trim() : "";
+    }
+
+    function buildPartialUrl(page) {
+        const url = new URL(window.location.href);
+        url.searchParams.set("page", page);
+        url.searchParams.set("partial", "1");
+        return url.pathname + url.search;
+    }
+
+    async function loadPageContent(page, { pushState = true } = {}) {
+        const contentZone = document.querySelector(CONTENT_ZONE_SELECTOR);
+        if (!contentZone || !page) {
+            return;
+        }
+
+        try {
+            const response = await fetch(buildPartialUrl(page), {
+                headers: {
+                    "X-Requested-With": "fetch",
+                },
+            });
+
+            const html = await response.text();
+            contentZone.innerHTML = html;
+
+            if (pushState) {
+                const nextUrl = new URL(window.location.href);
+                nextUrl.searchParams.set("page", page);
+                history.pushState({ page }, "", nextUrl.pathname + nextUrl.search);
+            }
+
+            initPageFeatures();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        } catch (error) {
+            console.error("Failed to load page content", error);
+            window.location.href = `index.php?page=${encodeURIComponent(page)}`;
+        }
+    }
+
+    function initAjaxPageNavigation() {
+        document.addEventListener("click", (event) => {
+            const link = event.target.closest("a[href]");
+            if (!link) {
+                return;
+            }
+
+            if (link.target && link.target !== "_self") {
+                return;
+            }
+
+            const href = link.getAttribute("href");
+            if (!href || href.startsWith("#")) {
+                return;
+            }
+
+            const page = parsePageFromHref(link.href);
+            if (!page) {
+                return;
+            }
+
+            event.preventDefault();
+            loadPageContent(page);
+        });
+
+        window.addEventListener("popstate", () => {
+            const params = new URLSearchParams(window.location.search);
+            const page = params.get("page") || "main";
+            loadPageContent(page, { pushState: false });
+        });
+    }
+
     initDropdowns();
-    initSearch();
-    initFavorites();
-    initCardNavigation();
+    initPageFeatures();
+    initAjaxPageNavigation();
 })();
