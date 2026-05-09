@@ -18,6 +18,10 @@
     padding: 0 18px;
 }
 
+#content-zone {
+    flex: 1;
+}
+
 header {
     position: relative;
     z-index: 100;
